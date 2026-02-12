@@ -1,19 +1,13 @@
-def greet_user():
-    print("Welcome to the calculator!\n\n")
+from Input import greet_user, take_input, show_menu, execute_operation
 
 
-def take_input():
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
-    return num1, num2
+def main():
+    greet_user()
+    num1, num2 = take_input()
+    choice = show_menu()
+    result = execute_operation(choice, num1, num2)
+    print(f"The result is: {result}")
 
 
-def show_menu():
-    print("Choose an operation:")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
-    print("5. Exit")
-    choice = int(input("\nEnter your choice: "))
-    return choice
+if __name__ == "__main__":
+    main()
