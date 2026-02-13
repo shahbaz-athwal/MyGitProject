@@ -13,3 +13,8 @@ def multiply(x, y):
 # function to divides two numbers
 def divide(x, y):
     return x / y
+# function to add to numbers and then subtract a new value from it
+def cal(x, y, z):
+    return (x + y) - z
+
+
